@@ -28,7 +28,7 @@ class _MyAppState  extends State<MyIndex> with SingleTickerProviderStateMixin{
    @override
   void initState() {
     // TODO: implement initState
-    super.initState();
+//    super.initState();
     controller = new TabController(length: 3, vsync: this);
   }
   
@@ -51,7 +51,7 @@ class _MyAppState  extends State<MyIndex> with SingleTickerProviderStateMixin{
             new my()
           ]),
       bottomNavigationBar: new Material(
-        color: Colors.,
+        color: Colors.cyan,
         child: new TabBar(
             controller: controller,
             tabs: <Tab>[

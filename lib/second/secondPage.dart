@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 
-class secondPage extends StatefulWidget{
+import '../template/listTemp.dart';
+class secondPage extends StatefulWidget {
   @override
-  secondPageState createState() => new secondPageState();
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    return secondPageState();
+  }
 }
 
 class secondPageState extends State<secondPage>{
@@ -15,7 +19,7 @@ class secondPageState extends State<secondPage>{
         title: new Text("dier ye "),
       ),
       body: new Center(
-        child: new Text("dier ye jie mian "),
+        child: new listTemp()
       ),
     );
   }

@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 
+import 'input.dart';
 class home extends StatefulWidget{
   @override
-  homeState createState() => new homeState();
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    return homeState();
+  }
 }
 
 class homeState extends State<home>{
 
+  TextEditingController controller;
+  String active = "test";
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -15,8 +21,23 @@ class homeState extends State<home>{
         title: new Text("shoy ye "),
       ),
       body: new Center(
-        child: new Text("shou ye jie mian "),
+        child: Column(
+          children: <Widget>[
+            new TextField(
+              controller: controller,
+              onChanged: _onChanged,
+            ),
+            new Input(active: active,)
+
+          ],
+        )
       ),
     );
   }
+  void _onChanged(String value){
+    setState(() {
+      active = value;
+    });
+  }
 }
+

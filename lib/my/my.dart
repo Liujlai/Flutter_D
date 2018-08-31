@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 
 class my extends StatefulWidget{
+
   @override
-  myState createState() => new myState();
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    return myState();
+  }
 }
 
 class myState extends State<my>{
